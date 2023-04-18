@@ -31,8 +31,11 @@ namespace HerokuappTests.Tests
 
             dropDown.SelectByText("Option 1");
             Assert.That(dropDown.SelectedOption.GetAttribute("selected"), Is.EqualTo("true"));
+            Assert.That(dropDown.SelectedOption.Text, Is.EqualTo("Option 1"));
 
             dropDown.SelectByText("Option 2");
+            Assert.That(dropDown.SelectedOption.GetAttribute("selected"), Is.EqualTo("true"));
+            Assert.That(dropDown.SelectedOption.Text, Is.EqualTo("Option 2"));
         }
 
         [TearDown]
